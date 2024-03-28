@@ -78,7 +78,7 @@ public class task2 : MonoBehaviour
     {
         foreach(var item in nameHash)
     {
-        Debug.Log(item.ToString());
+        Debug.Log("The array has duplicate names: " + item.ToString());
     }
     }
 
