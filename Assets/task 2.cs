@@ -52,10 +52,10 @@ public class task2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Created the name array: " + names[0] + names[1] + names[2] + names[3] + names[4] + names[5] + names[6] + names[7] + names[8] + names[9] + names[10] + names[11] + names[12] + names[13] + names[14] +  names[15] + names[16] + names[17] + names[18] + names[19]);
         //PrintArray();
-        nameHash.Add("test");
-
-        PrintHash();
+        AddArray();
+        //PrintHash();
     }
 
     // Update is called once per frame
@@ -78,6 +78,35 @@ public class task2 : MonoBehaviour
     {
         Debug.Log(item.ToString());
     }
+    }
+
+    void AddArray()
+    {
+        /*for(int i=0; i<=20; i++){
+            nameHash.Add(names[0]);
+        }*/
+
+        nameHash.Add(names[0]);
+        nameHash.Add(names[1]);
+        nameHash.Add(names[2]);
+        nameHash.Add(names[3]);
+        nameHash.Add(names[4]);
+        nameHash.Add(names[5]);
+        nameHash.Add(names[6]);
+        nameHash.Add(names[7]);
+        nameHash.Add(names[8]);
+        nameHash.Add(names[9]);
+        nameHash.Add(names[10]);
+        nameHash.Add(names[11]);
+        nameHash.Add(names[12]);
+        nameHash.Add(names[13]);
+        nameHash.Add(names[14]);
+        nameHash.Add(names[15]);
+        nameHash.Add(names[16]);
+        nameHash.Add(names[17]);
+        nameHash.Add(names[18]);
+        nameHash.Add(names[19]);
+
     }
 
 }
