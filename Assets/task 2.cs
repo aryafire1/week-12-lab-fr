@@ -55,7 +55,9 @@ public class task2 : MonoBehaviour
         Debug.Log("Created the name array: " + names[0] + names[1] + names[2] + names[3] + names[4] + names[5] + names[6] + names[7] + names[8] + names[9] + names[10] + names[11] + names[12] + names[13] + names[14] +  names[15] + names[16] + names[17] + names[18] + names[19]);
         //PrintArray();
         AddArray();
-        //PrintHash();
+        AddNewArray();
+        nameHash.IntersectWith(dupeHash);
+        PrintHash();
     }
 
     // Update is called once per frame
@@ -82,11 +84,11 @@ public class task2 : MonoBehaviour
 
     void AddArray()
     {
-        /*for(int i=0; i<=20; i++){
-            nameHash.Add(names[0]);
-        }*/
+        for(int i=0; i<19; i++){
+            nameHash.Add(names[i]);
+        }
 
-        nameHash.Add(names[0]);
+        /*nameHash.Add(names[0]);
         nameHash.Add(names[1]);
         nameHash.Add(names[2]);
         nameHash.Add(names[3]);
@@ -105,8 +107,32 @@ public class task2 : MonoBehaviour
         nameHash.Add(names[16]);
         nameHash.Add(names[17]);
         nameHash.Add(names[18]);
-        nameHash.Add(names[19]);
+        nameHash.Add(names[19]);*/
 
+    }
+
+    void AddNewArray()
+    {
+        /*for(int i=0; i<14; i++){
+            dupeHash.Add(newNames[i]);
+        }
+        nuclear bomb*/
+
+        dupeHash.Add(newNames[0]);
+        dupeHash.Add(newNames[1]);
+        dupeHash.Add(newNames[2]);
+        dupeHash.Add(newNames[3]);
+        dupeHash.Add(newNames[4]);
+        dupeHash.Add(newNames[5]);
+        dupeHash.Add(newNames[6]);
+        dupeHash.Add(newNames[7]);
+        dupeHash.Add(newNames[8]);
+        dupeHash.Add(newNames[9]);
+        dupeHash.Add(newNames[10]);
+        dupeHash.Add(newNames[11]);
+        dupeHash.Add(newNames[12]);
+        dupeHash.Add(newNames[13]);
+        dupeHash.Add(newNames[14]);
     }
 
 }
