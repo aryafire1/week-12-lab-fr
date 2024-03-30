@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class task1 : MonoBehaviour
+public class Task1 : MonoBehaviour
 {
     public List<string> nameLibrary = new List<string>()
-       {
+    {
         "Mario",
         "Luigi",
         "Peach",
@@ -68,15 +68,16 @@ public class task1 : MonoBehaviour
     void AddRandomPlayer()
     {
         string randomName = nameLibrary[Random.Range(0, nameLibrary.Count)];
-        string randomLastName = lastnamelibrary[Random.Range(0, nameLibrary.Count)];
+        string randomLastName = lastnamelibrary[Random.Range(0, lastnamelibrary.Count)]; // Changed nameLibrary to lastnamelibrary
 
-        loginQueue.Enqueue(randomName);
-        Debug.Log(randomName + randomLastName + " has been added to the Queue.");
+        loginQueue.Enqueue(randomName + " " + randomLastName); // Changed to concatenate both first name and last name
+        Debug.Log(randomName + " " + randomLastName + " has been added to the Queue."); // Changed to concatenate both first name and last name
         StartCoroutine(LoginPlayer(randomName));
     }
+
     IEnumerator LoginPlayer(string playerName)
     {
-        Debug.Log("Logging in" + playerName +  "...");
+        Debug.Log("Logging in " + playerName + "...");
         yield return new WaitForSeconds(Random.Range(2f, 5f));
         Debug.Log(playerName + " has logged in.");
         loginQueue.Dequeue();
