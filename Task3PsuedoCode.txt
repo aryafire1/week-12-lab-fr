@@ -1,0 +1,9 @@
+Declare deck and hand.
+list deck
+Start
+Generate deck
+Generate hand by drawing 4 cards
+bool winning deckhand
+int random hand with the deck list
+return deck win condition or loss condition with bool
+
